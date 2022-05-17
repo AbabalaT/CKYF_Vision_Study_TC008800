@@ -4,17 +4,21 @@
 using namespace std;
 
 enum Types{
-	engineer=0, infantry=1, guard=2, hero=3
+	engineer=0,
+	infantry=1,
+	guard=2,
+	hero=3
 };
 
 enum Teams{
-	red=1,blue=2
+	red=1,
+	blue=2
 };
 
 class Robot{
 	private:
-        int health;
-        int heat;
+        	int health;
+        	int heat;
         
 	public:
 		Types type;
@@ -22,10 +26,9 @@ class Robot{
 		int num;
 		
         Robot(int num_in, Teams team_in, Types type_in){
-        	
-        	type = type_in;
+		type = type_in;
         	team = team_in;
-            num= num_in;
+            	num= num_in;
             
             if(type == engineer){
             	heat = 0;
@@ -199,14 +202,14 @@ int main(){
 			}
 		}
 		
-		if(cmd[0]=='E'){
+		if(cmd[0]=='E'){//打印
 			//遍历容器操作 
 			for(vector<Robot>::iterator r_t = rvec.begin(); r_t != rvec.end(); r_t ++){
 				r_t->show();
 			}
 			cout<<"结束输出"<<endl; 
 		}
-		if(cmd[0]=='C'){
+		if(cmd[0]=='C'){//结束程序
 			return 0;
 		}
 	}
